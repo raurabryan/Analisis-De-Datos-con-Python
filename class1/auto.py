@@ -29,3 +29,23 @@ class Auto:
             print("Ya estoy usado.")
         else:
             print("¡Ya déjame descansar por favor!")
+
+
+    @classmethod
+    def auto_nuevo(cls, modelo):
+        año_actual = 2025
+        return cls("Toyota", modelo, año_actual)
+
+    @staticmethod
+    def mismo_kilometraje(auto1, auto2):
+        return auto1.kilometraje == auto2.kilometraje
+
+    @classmethod
+    def auto_generico(cls, modelo, año):
+        return cls("Sin Marca", modelo, año)
+
+    @staticmethod
+    def es_clasico(año):
+        año_actual = 2025
+        return (año_actual - año) > 30
+    
